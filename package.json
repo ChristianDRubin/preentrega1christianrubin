@@ -21,6 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://christiandrubin.github.io/preentrega1christianrubin/",
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -9,7 +9,7 @@ import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/preentrega1christianrubin'>
       <NavBar />
       <Routes>
         <Route exact path="/" element={<ItemListContainer greeting={'Welcome to the ReactStore'} />}></Route>
