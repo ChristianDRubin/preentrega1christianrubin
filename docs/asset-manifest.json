@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/preentrega1christianrubin/static/css/main.eb2135b6.css",
+    "main.js": "/preentrega1christianrubin/static/js/main.59d9b935.js",
+    "static/js/787.4a84408e.chunk.js": "/preentrega1christianrubin/static/js/787.4a84408e.chunk.js",
+    "index.html": "/preentrega1christianrubin/index.html",
+    "main.eb2135b6.css.map": "/preentrega1christianrubin/static/css/main.eb2135b6.css.map",
+    "main.59d9b935.js.map": "/preentrega1christianrubin/static/js/main.59d9b935.js.map",
+    "787.4a84408e.chunk.js.map": "/preentrega1christianrubin/static/js/787.4a84408e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb2135b6.css",
+    "static/js/main.59d9b935.js"
+  ]
+}
