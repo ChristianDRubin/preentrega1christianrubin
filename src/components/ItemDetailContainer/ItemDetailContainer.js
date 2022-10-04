@@ -1,11 +1,12 @@
 import Container from 'react-bootstrap/Container';
-import ItemDetail from "./ItemDetail";
+import ItemDetail from "../ItemDetailContainer/ItemDetail";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import { getProductById } from '../utils/products';
+import { getProductById } from '../../utils/products';
 
 
-const ItemDetailContainer = () => {  
+
+const ItemDetailContainer = () => {
 
   const [product, setProduct] = useState();
   const { id } = useParams();

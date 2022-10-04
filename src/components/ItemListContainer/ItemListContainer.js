@@ -1,4 +1,3 @@
-import ItemCount from "../ItemCount";
 import Container from 'react-bootstrap/Container';
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
@@ -15,20 +14,23 @@ const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
 
   //Se usa un useEffect para traer los datos cuando ya se monta el componente
-    useEffect(() => {
-    if (categoryId)
+  useEffect(() => {
+    if (categoryId) {
       getProductsByCategory(categoryId)
-    else
-      getProducts()
-
         .then((data) => setProducts(data))
         .catch(error => console.warn(error));
+    }
+    else {
+      getProducts()
+        .then((data) => setProducts(data))
+        .catch(error => console.warn(error));
+    }
+
   }, [categoryId]);
 
   return (
     <Container>
       <h3 className="greeting">{greeting}</h3>
-      {/* <ItemCount/> */}
       <ItemList products={products} />
     </Container>
   );
