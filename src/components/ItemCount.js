@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Button from 'react-bootstrap/Button';
 const Counter = () => {
   const [count, setCount] = useState(0);
   const stock = 10; // obtendremos de base esto..
@@ -16,9 +16,9 @@ const Counter = () => {
 
   return (
     <div>
-      <button onClick={handleClickSumar}>+</button>
-      <button onClick={handleClickRestar}>-</button>
-      <p>Cantidad de productos en el carrito {count}</p>
+      Agregar al carrito: <Button onClick={handleClickSumar} variant="primary"> + </Button><br/>
+      Eliminar seleccion: <Button onClick={handleClickRestar} variant="warning"> - </Button><br/>
+      <p>Cantidad a agregar: {count}</p>
     </div>
   );
 };
