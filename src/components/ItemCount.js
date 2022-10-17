@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-const Counter = () => {
-  const [count, setCount] = useState(0);
-  const stock = 10; // obtendremos de base esto..
+// import './ItemCount.css';
+const Counter = ({ initial, stock, onAdd }) => {
+
+  const [count, setCount] = useState(parseInt(initial));
+
   const handleClickSumar = () => {
     if (count < stock) {
       setCount(count + 1);
@@ -14,12 +16,32 @@ const Counter = () => {
     }
   };
 
+  const handleClick = () => onAdd(count);
+
+  useEffect(() => {
+    setCount(parseInt(initial));
+  }, [initial])
+
+
   return (
-    <div>
-      Agregar al carrito: <Button onClick={handleClickSumar} variant="primary"> + </Button><br/>
-      Eliminar seleccion: <Button onClick={handleClickRestar} variant="warning"> - </Button><br/>
-      <p>Cantidad a agregar: {count}</p>
-    </div>
+    <>
+      <div>
+        <h5>
+          <span>
+            <Button variant="danger" disabled={count <= 0} onClick={handleClickRestar}>-</Button>
+          </span>
+          Cantidad: {count}
+          <span>
+            <Button variant="success" disabled={count >= stock} onClick={handleClickSumar}>+</Button>
+          </span>
+        </h5>
+      </div>
+      <div>
+        <Button variant="primary" disabled={stock <= 0} onClick={handleClick}>
+          Agregar al  Carrito
+        </Button>
+      </div>
+    </>
   );
 };
 
