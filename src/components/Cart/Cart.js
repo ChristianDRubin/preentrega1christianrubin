@@ -39,6 +39,7 @@ const Cart = () => {
     setOrderId(newOrderId);
     clear();
   }
+
   const showTable = cart.length > 0
 
   return (
@@ -61,7 +62,7 @@ const Cart = () => {
                   <td>{item.title}</td>
                   <td>{item.price}</td>
                   <td>{item.quantity}</td>
-                  <td><FaTrashAlt onClick={() => handleRemove(item.id)} /></td>
+                    <td><FaTrashAlt onClick={() => handleRemove(item.id)}/></td>
                 </tr>
               ))}
             </tbody>

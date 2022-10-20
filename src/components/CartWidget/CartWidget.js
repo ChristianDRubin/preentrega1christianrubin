@@ -6,14 +6,14 @@ import CartContext from "../../context/CartContext";
 import { Badge } from 'react-bootstrap';
 
 const CartWidget = () => {
-  const { totalQuantity } = useContext(CartContext);
+  const { totalquantity } = useContext(CartContext);
   return (
     <>
       <Link to="/cart">
         <AiOutlineShoppingCart />
       </Link>
-      {totalQuantity > 0 && (
-        <Badge pill bg="danger">{totalQuantity}</Badge>
+      {totalquantity > 0 && (
+        <Badge pill bg="danger">{totalquantity}</Badge>
       )}
     </>
   );

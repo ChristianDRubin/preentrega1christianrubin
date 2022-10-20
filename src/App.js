@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -7,32 +6,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import { CartProvider } from './context/CartContext';
-import { useEffect } from 'react';
-import { doc, getFirestore, getDoc } from 'firebase/firestore';
-import { createAllProducts } from './utils/products';
 
 function App() {
-
-  useEffect(() => {
-    const db = getFirestore();
-
-    const itemReference = doc(db, "items", "ghX3z61aOtBEXmetDIbJ");
-
-    //Obtiene el doc firebase
-    getDoc(itemReference)
-      .then((snapshot) => {
-
-        const item = {
-          id: snapshot.id,
-          ...snapshot.data()
-        };
-        console.log(item)
-
-      })
-      .catch(error => console.warn(error));
-      // createAllProducts();
-  }, []);
-
   return (
     <BrowserRouter basename='/preentrega1christianrubin'>
       <CartProvider>
