@@ -1,6 +1,6 @@
 import Item from "../Item/Item";
 import "./ItemList.css";
-const ItemList = ({ products }) => {
+const ItemList = ({ products = [] }) => {// setea valores por default
 
   return (
     <div className="itemList">

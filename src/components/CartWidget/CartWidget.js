@@ -6,9 +6,9 @@ import CartContext from "../../context/CartContext";
 import { Badge } from 'react-bootstrap';
 
 const CartWidget = () => {
-   const { totalQuantity } = useContext(CartContext);
+  const { totalQuantity } = useContext(CartContext);
   return (
- <>
+    <>
       <Link to="/cart">
         <AiOutlineShoppingCart />
       </Link>

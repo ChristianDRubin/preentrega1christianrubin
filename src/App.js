@@ -7,12 +7,11 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import { CartProvider } from './context/CartContext';
-import Loader from './components/Loader';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { doc, getFirestore, getDoc } from 'firebase/firestore';
+import { createAllProducts } from './utils/products';
 
 function App() {
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const db = getFirestore();
@@ -31,7 +30,7 @@ function App() {
 
       })
       .catch(error => console.warn(error));
-    setLoading(true);
+      // createAllProducts();
   }, []);
 
   return (
@@ -47,7 +46,6 @@ function App() {
           <Route exact path="/account" element={<Checkout />}></Route>
         </Routes>
       </CartProvider>
-      <Loader loading={loading} />
     </BrowserRouter>
   );
 }
