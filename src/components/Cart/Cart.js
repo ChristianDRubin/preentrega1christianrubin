@@ -5,7 +5,7 @@ import { FaTrashAlt } from "react-icons/fa";
 import CartContext from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import { createOrder } from "../../utils/orders";
-import OrderModal from "../OrderModal/OrderModal";
+import Checkout from "../Checkout/Checkout";
 
 const buyerMock = {
   name: 'coderhouse',
@@ -79,7 +79,7 @@ const Cart = () => {
           </Link>
         </>
       )}
-      <OrderModal
+      <Checkout
         showModal={showModal}
         onClose={handleClose}
         onBuy={handleBuy}

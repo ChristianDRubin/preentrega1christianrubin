@@ -20,25 +20,26 @@ https://github.com/ChristianDRubin/preentrega1christianrubin
 
  - `/components`
  - `/contexts`
+ - `/firebase`
  - `/utils`
 
-## Available Scripts
+## Scripts disponibles
 
-In the project directory, you can run:
+En el directorio del proyecto puedes correr:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Correr la aplicacion en modo desarrollo.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `npm run build`
 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ver la seccion sobre [deployment](https://facebook.github.io/create-react-app/docs/deployment) para mas informacion.
 
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Puedes aprender mas sobre [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para aprender react, revisa su documentacion [React documentation](https://reactjs.org/).
