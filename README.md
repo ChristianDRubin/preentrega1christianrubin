@@ -16,6 +16,8 @@ https://christiandrubin.github.io/preentrega1christianrubin/
 
 ![](https://firebasestorage.googleapis.com/v0/b/e-commercecoder-83459.appspot.com/o/demosite.gif?alt=media&token=6dfb0931-4ab3-40f9-8b75-f2a6e1b79898)
 
+https://firebasestorage.googleapis.com/v0/b/e-commercecoder-83459.appspot.com/o/demosite.gif?alt=media&token=6dfb0931-4ab3-40f9-8b75-f2a6e1b79898
+
 ## Estructura de directorios
 
  - `/components`
