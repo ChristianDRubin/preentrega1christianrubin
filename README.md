@@ -7,9 +7,9 @@ Este proyecto fue creado con:
  - Boostrap
  - Firebase
 
-### Deployment
+### Site Deployment
 
-https://github.com/ChristianDRubin/preentrega1christianrubin
+https://christiandrubin.github.io/preentrega1christianrubin/
 
 
 ## Demo
