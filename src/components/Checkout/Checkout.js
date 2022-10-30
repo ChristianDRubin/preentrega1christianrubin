@@ -1,41 +1,55 @@
-// import { useState } from "react";
 import { Alert, Button, Form, Modal, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './Checkout.css';
 
-const Checkout = ({ showModal, onClose, onBuy, orderId }) => {
-    // const { order, setOrder} = useState();
-    // function newOrder (){
-    //     const order = {
-    //         name: 'coderhouse',
-    //         phone: '1122334455',
-    //         email: 'coderhouse@mail.com'
-    //       };
-    // }
-   
+const Checkout = ({ showModal, onClose, handleBuy, orderId }) => {
+    const buyer = {
+        name: '',
+        phone: '',
+        email: ''
+    }
+    const handleChange = (e) => {
+        switch (e.target.name) {
+            case "Email": buyer.email = e.target.value;
+                break;
+            case "Telefono": buyer.phone = e.target.value;
+                break;
+            case "Nombre": buyer.name = e.target.value;
+                break;
+            default:
+                break;
+        }      
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        e.target = '';
+    }
+
     return (
         <Container>
             <Modal show={showModal} onHide={onClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Finalizar comprar</Modal.Title>
+                    <Modal.Title>Finalizar comprar, ingresar datos:</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control name="Email" type="email" placeholder="Ingrese email" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Reingresar Email</Form.Label>
-                        <Form.Control name="remail" type="email" placeholder="Re ingrese email" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Nombre</Form.Label>
-                        <Form.Control name="Nombre" type="text" placeholder="Ingrese nombre" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Telefono</Form.Label>
-                        <Form.Control name="Telefono" type="text" placeholder="Ingrese telefono" />
-                    </Form.Group>
+                    <Form onSubmit={(e) => handleSubmit(e, buyer)}>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control name="Email" type="email" placeholder="Ingrese email" onChange={handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Reingresar Email</Form.Label>
+                            <Form.Control name="validEmail" type="email" placeholder="Re ingrese email" onChange={handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Nombre</Form.Label>
+                            <Form.Control name="Nombre" type="text" placeholder="Ingrese nombre" onChange={handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Telefono</Form.Label>
+                            <Form.Control name="Telefono" type="text" placeholder="Ingrese telefono" onChange={handleChange} />
+                        </Form.Group>
+                    </Form>
                 </Modal.Body>
                 <Modal.Footer>
                     {!orderId && (
@@ -43,7 +57,7 @@ const Checkout = ({ showModal, onClose, onBuy, orderId }) => {
                             <Button variant="secondary" onClick={onClose}>
                                 Cancelar
                             </Button>
-                            <Button variant="primary" onClick={onBuy}>
+                            <Button variant="primary" onClick={event => handleBuy(buyer)} onSubmit={handleSubmit}>
                                 Comprar
                             </Button>
                         </>

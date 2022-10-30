@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import ItemDetail from "../ItemDetailContainer/ItemDetail";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
@@ -20,10 +19,10 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   return (
-    <Container>
+    <div className="container mt-5 mb-5 align-items-center cartContainer">
       <h1>Detalle del producto</h1>
       {product && <ItemDetail product={product} />}
-    </Container>
+    </div>
   );
 }
 

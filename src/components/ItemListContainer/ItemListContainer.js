@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -29,10 +28,18 @@ const ItemListContainer = ({ greeting }) => {
   }, [categoryId]);
 
   return (
-    <Container>
-      <h3 className="greeting">{greeting}</h3>
-      <ItemList products={products} />
-    </Container>
+    <div className="container mydiv">
+      <div className="row">
+        <section className="jumbotron text-center down">
+          <div className="container">
+            <h1 className="jumbotron-heading">{greeting}</h1>
+            <p className="lead text-muted mb-0">From here you can buy your car are you looking for</p>
+          </div>
+        </section>
+        <ItemList products={products} />
+      </div>
+    </div>
+
   );
 }
 

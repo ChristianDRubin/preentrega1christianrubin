@@ -1,4 +1,7 @@
 .cartContainer svg {
   color: red;
-  cursor: pointer;
+  cursor: pointer;    
+}
+.cartContainer {
+  padding-top: 6%;
 }
