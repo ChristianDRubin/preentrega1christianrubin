@@ -7,14 +7,14 @@ Este proyecto fue creado con:
  - Boostrap
  - Firebase
 
-### Site Deployment
+### Sitio deployado
 
 https://christiandrubin.github.io/preentrega1christianrubin/
 
 
 ## Demo
 
-![](https://firebasestorage.googleapis.com/v0/b/coderhouse-ecommerce-4f34a.appspot.com/o/navegacion.gif?alt=media&token=cb5b29f8-edf1-4c3a-b552-63edd73680b9)
+![](https://firebasestorage.googleapis.com/v0/b/e-commercecoder-83459.appspot.com/o/demosite.gif?alt=media&token=6dfb0931-4ab3-40f9-8b75-f2a6e1b79898)
 
 ## Estructura de directorios
 
@@ -30,7 +30,7 @@ En el directorio del proyecto puedes correr:
 ### `npm start`
 
 Correr la aplicacion en modo desarrollo.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000/preentrega1christianrubin) to view it in your browser.
 
 ### `npm run build`
 
